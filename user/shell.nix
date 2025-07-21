@@ -7,8 +7,8 @@
       y = "yazi";
       wd = "wg-quick down /etc/wireguard/pcun.conf";
       wu = "wg-quick up /etc/wireguard/pcun.conf";
-      nrs = "sudo nixos-rebuild switch --flake ~/.dotfiles";
-      hrs = "home-manager switch --flake ~/.dotfiles";
+      nrs = "sudo nixos-rebuild switch --impure --flake ~/.dotfiles";
+      hrs = "home-manager switch --impure --flake ~/.dotfiles";
       code = "codium";
     };
 

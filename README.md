@@ -25,7 +25,6 @@
     *   `users.nix`: Определение пользователей.
 *   `user/`: Директория, содержащая конфигурации Home Manager для пользователя.
     *   `home.nix`: Базовый файл Home Manager, который включает другие модули.
-    *   `secrets.nix`: Ваши секреты (не отслеживается Git, создается из `secrets.nix.example`).
     *   `apps/`: Конфигурации для отдельных приложений.
     *   `environment.nix`: Переменные окружения.
     *   `packages.nix`: Список пользовательских пакетов.
@@ -60,28 +59,6 @@ git clone https://github.com/Forwall100/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
 
-### 2. Настройка секретов
-
-Этот репозиторий использует файл `secrets.nix` для хранения конфиденциальной информации (например, API-ключей). Файл `secrets.nix` не отслеживается Git.
-
-Чтобы настроить свои секреты:
-
-1.  Скопируйте файл `user/secrets.nix.example` в `user/secrets.nix`:
-
-    ```bash
-    cp user/secrets.nix.example user/secrets.nix
-    ```
-
-2.  Откройте `user/secrets.nix` и заполните свои секреты. Например:
-
-    ```nix
-    {
-      openrouterApiKey = "ВАШ_API_КЛЮЧ_ЗДЕСЬ";
-    }
-    ```
-
-> [!NOTE]
-> После определения секретов в `secrets.nix`, вы можете использовать их в других частях вашей конфигурации NixOS и Home Manager, например, в `user/environment.nix` для установки переменных окружения.
 
 ### 3. Применение конфигурации
 

@@ -3,8 +3,6 @@ let
   appsDir = ./. + "/apps";
   nixFiles = builtins.filter (f: lib.stringEndsWith ".nix" f) (builtins.readDir appsDir);
   importsList = map (f: "${appsDir}/${f}") nixFiles;
-  # Import secrets from user/secrets.nix, or use secrets.nix.example as a fallback
-  secrets = if builtins.pathExists ./secrets.nix then import ./secrets.nix else import ./secrets.nix.example;
 in
 {
   home.username = "user";
@@ -36,5 +34,4 @@ in
 
   programs.home-manager.enable = true;
 
-  _module.args.secrets = secrets;
 }

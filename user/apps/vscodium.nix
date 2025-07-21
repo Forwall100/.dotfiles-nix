@@ -3,7 +3,7 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
-    extensions = with pkgs.vscode-extensions; [
+    profiles.default.extensions = with pkgs.vscode-extensions; [
       ms-python.python
       ms-python.black-formatter
       saoudrizwan.claude-dev
@@ -15,7 +15,7 @@
       pkief.material-icon-theme
       enkia.tokyo-night
     ];
-    userSettings = {
+    profiles.default.userSettings = {
       "editor.fontFamily" = "CaskaydiaCove Nerd Font";
       "editor.fontSize" = 15;
       "editor.fontLigatures" = true;

@@ -11,7 +11,7 @@ in
       mainBar = {
         layer = "top";
         position = "top";
-        margin = "5 5 0";
+        margin = "5 5";
         "fixed-center" = true;
         reload_style_on_change = true;
         height = 34;

@@ -9,6 +9,7 @@
     neovim
     git
     vscodium
+    git-filter-repo
 
     # CLI и системные утилиты
     wireguard-tools

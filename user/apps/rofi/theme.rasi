@@ -1,0 +1,299 @@
+/*****----- Configuration -----*****/
+configuration {
+        modi:                       "drun,run,filebrowser,window";
+    show-icons:                 true;
+    display-drun:               " ";
+    display-run:                " ";
+    display-filebrowser:        " ";
+    display-window:             " ";
+        drun-display-format:        "{name}";
+        window-format:              "{w} · {c} · {t}";
+}
+
+/*****----- Global Properties -----*****/
+
+* {
+    border-colour:               #888888;
+    handle-colour:               #bbbbbb;
+    background-colour:           rgba(0, 0, 0, 0.5);
+    foreground-colour:           #f0f0f0;
+    alternate-background:        rgba(50, 50, 50, 0.5);
+    normal-background:           rgba(0, 0, 0, 0.5);
+    normal-foreground:           #f0f0f0;
+    urgent-background:           #aaaaaa;
+    urgent-foreground:           #222222;
+    active-background:           #999999;
+    active-foreground:           #222222;
+    selected-normal-background:  #cccccc;
+    selected-normal-foreground:  #222222;
+    selected-urgent-background:  #999999;
+    selected-urgent-foreground:  #222222;
+    selected-active-background:  #aaaaaa;
+    selected-active-foreground:  #222222;
+    alternate-normal-background: rgba(0, 0, 0, 0.5);
+    alternate-normal-foreground: #f0f0f0;
+    alternate-urgent-background: #aaaaaa;
+    alternate-urgent-foreground: #222222;
+    alternate-active-background: #999999;
+    alternate-active-foreground: #222222;
+}
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       600px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                #888888;
+    cursor:                      "default";
+    /* Backgroud Colors */
+    background-color:            rgba(0, 0, 0, 0.5);
+    /* Backgroud Image */
+    //background-image:          url("/path/to/image.png", none);
+    /* Simple Linear Gradient */
+    //background-image:          linear-gradient(red, orange, pink, purple);
+    /* Directional Linear Gradient */
+    //background-image:          linear-gradient(to bottom, pink, yellow, magenta);
+    /* Angle Linear Gradient */
+    //background-image:          linear-gradient(45, cyan, purple, indigo);
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     30px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                #888888;
+    background-color:            transparent;
+    children:                    [ "inputbar", "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                #888888;
+    background-color:            transparent;
+    text-color:                  #f0f0f0;
+    children:                    [ "textbox-prompt-colon", "entry", "mode-switcher" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    padding:                     5px 0px;
+    expand:                      false;
+    str:                         "";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+entry {
+    enabled:                     true;
+    padding:                     5px 0px;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           inherit;
+}
+num-filtered-rows {
+    enabled:                     true;
+    expand:                      false;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+textbox-num-sep {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "/";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+num-rows {
+    enabled:                     true;
+    expand:                      false;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+case-indicator {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+
+    spacing:                     5px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                #888888;
+    background-color:            transparent;
+    text-color:                  #f0f0f0;
+    cursor:                      "default";
+}
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                #bbbbbb;
+    border-radius:               10px;
+    background-color:            rgba(50, 50, 50, 0.5);
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     5px 10px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                #888888;
+    background-color:            transparent;
+    text-color:                  #f0f0f0;
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            rgba(0, 0, 0, 0);
+    text-color:                  #f0f0f0;
+}
+element normal.urgent {
+    background-color:            rgba(0, 0, 0, 0);
+    text-color:                  #222222;
+}
+element normal.active {
+    background-color:            rgba(0, 0, 0, 0);
+    text-color:                  #222222;
+}
+element selected.normal {
+    background-color:            #cccccc;
+    text-color:                  #222222;
+}
+element selected.urgent {
+    background-color:            #999999;
+    text-color:                  #222222;
+}
+element selected.active {
+    background-color:            #aaaaaa;
+    text-color:                  #222222;
+}
+element alternate.normal {
+    background-color:            rgba(0, 0, 0, 0);
+    text-color:                  #f0f0f0;
+}
+element alternate.urgent {
+    background-color:            #aaaaaa;
+    text-color:                  #222222;
+}
+element alternate.active {
+    background-color:            #999999;
+    text-color:                  #222222;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        24px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Mode Switcher -----*****/
+mode-switcher{
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                #888888;
+    background-color:            transparent;
+    text-color:                  #f0f0f0;
+}
+button {
+    padding:                     5px 10px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                #888888;
+    background-color:            rgba(50, 50, 50, 0.5);
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+button selected {
+    background-color:            #cccccc;
+    text-color:                  #222222;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                #888888;
+    background-color:            transparent;
+    text-color:                  #f0f0f0;
+}
+textbox {
+    padding:                     8px 10px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                #888888;
+    background-color:            rgba(50, 50, 50, 0.5);
+    text-color:                  #f0f0f0;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
+    placeholder-color:           #f0f0f0;
+    blink:                       true;
+    markup:                      true;
+}
+error-message {
+    padding:                     10px;
+    border:                      2px solid;
+    border-radius:               10px;
+    border-color:                #888888;
+    background-color:            rgba(0, 0, 0, 0.5);
+    text-color:                  #f0f0f0;
+}
+

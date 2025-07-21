@@ -51,7 +51,7 @@ tooltip label {
 
 /* Секция рабочих пространств */
 #workspaces {
-    background: rgba(26,26,26,0.2);
+    background: rgba(26,26,26,0.0);
     border-radius: 12px;
 }
 

@@ -4,8 +4,10 @@
   home.packages = with pkgs; [
     # Офисное
     obsidian
+    libreoffice-still
 
     # Разработка
+    python314
     neovim
     git
     vscodium

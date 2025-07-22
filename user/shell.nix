@@ -10,6 +10,7 @@
       nrs = "sudo nixos-rebuild switch --impure --flake ~/.dotfiles";
       hrs = "home-manager switch --impure --flake ~/.dotfiles";
       code = "codium";
+      invest = "~/Documents/code/investtrack/.venv/bin/python3 ~/Documents/code/investtrack/invest_cli.py";
     };
 
     initContent = ''

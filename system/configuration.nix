@@ -32,6 +32,9 @@
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
+  # Enable DNS service
+  services.resolved.enable = true;
+
   system.stateVersion = "25.05";
 
 }

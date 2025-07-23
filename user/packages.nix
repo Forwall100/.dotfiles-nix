@@ -5,8 +5,12 @@
     # Офисное
     obsidian
     libreoffice-still
+    typst-live
+    tinymist
+    typst
 
     # Разработка
+    nodejs_24
     python314
     neovim
     git

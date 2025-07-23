@@ -62,10 +62,7 @@ cd ~/.dotfiles
 
 ### 3. Применение конфигурации
 
-Создайте flake.lock (если его нет)
-```bash
-nix flake lock
-```
+Установите home-manager следуя официальному руководству -> [тык](https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone)
 
 Примените конфигурацию системы, используя Nix Flakes:
 
